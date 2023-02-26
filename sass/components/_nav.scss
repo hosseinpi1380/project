@@ -1,0 +1,23 @@
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255, .4);
+
+    .logo-box {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .logo {
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    
+}

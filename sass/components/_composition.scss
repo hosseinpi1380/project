@@ -1,0 +1,39 @@
+.composition {
+    position: relative;
+    
+    top: 20px;
+height: 100%;
+    &__photo {
+        position: absolute;
+        width: 55%;
+        transition: all .3s;
+        border-radius: 2rem;
+        box-shadow: 0 1rem 2rem 1px;
+
+        &:hover {
+            z-index: 100;
+            transform: scale(1.1) translateY(-2rem);
+            outline: green solid 1rem;
+            outline-offset: 1rem;
+        }
+
+        &:not(:hover) {
+            backdrop-filter: blur(3px);
+        }
+
+        &-1 {
+            top: -2rem;
+            left: 0;
+        }
+
+        &-2 {
+            right: 2rem;
+            top: 3rem;
+        }
+
+        &-3 {
+            left: 8rem;
+            top: 10rem;
+        }
+    }
+}

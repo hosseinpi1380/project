@@ -1,0 +1,32 @@
+.btn {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+        font-size: 25px;
+        padding: 15px 40px;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    &--white {
+        color: #777;
+        background-color: white;
+        border-radius: 30px;
+        margin-top: 20vw;
+        transition: all .2s;
+        animation-name: moveToTop;
+        animation-duration: 3s;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+
+    }
+}

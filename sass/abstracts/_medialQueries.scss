@@ -1,0 +1,50 @@
+@media screen and (max-width:474px) {
+    .header{
+        height: 1rem;
+    }
+    .btn--white {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .u-center-text{
+        h3{
+            width: 100%;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            color: red;
+        }
+    }
+   
+    .section-about{
+        
+        
+        .section-1-row{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 300px);
+        }
+        .section-1-left{
+            grid-column: 1/-1;
+            margin: 1rem 2rem; 
+            
+        }
+        .section-1-right{
+            grid-column: 1/-1;
+        
+            margin-top: -2rem;
+            
+            .composition{
+                
+                img{
+                    width: 50%
+                }
+                @include flexPosition;
+                &__photo:hover{
+                    outline: black solid 1rem;
+                    margin-right: 1rem;
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Great+Vibes&family=Josefin+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,500&display=swap");
+@keyframes moveToTop {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 474px) {
+  .header {
+    height: 1rem;
+  }
+  .btn--white {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .u-center-text h3 {
+    width: 100%;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: red;
+  }
+  .section-about .section-1-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 300px);
+  }
+  .section-about .section-1-left {
+    grid-column: 1/-1;
+    margin: 1rem 2rem;
+  }
+  .section-about .section-1-right {
+    grid-column: 1/-1;
+    margin-top: -2rem;
+  }
+  .section-about .section-1-right .composition {
+    display: flex;
+    justify-content: center;
+    align-items: alignItem;
+  }
+  .section-about .section-1-right .composition img {
+    width: 50%;
+  }
+  .section-about .section-1-right .composition__photo:hover {
+    outline: black solid 1rem;
+    margin-right: 1rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right bottom, #55c57a, #7ed56f);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.6745098039), rgba(40, 180, 133, 0.7215686275)), url(/img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  text-align: center;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.header__nav .logo-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.header__nav .logo {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.btn {
+  text-decoration: none;
+}
+.btn:link, .btn:visited {
+  font-size: 25px;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.btn--white {
+  color: #777;
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 20vw;
+  transition: all 0.2s;
+  animation-name: moveToTop;
+  animation-duration: 3s;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.composition {
+  position: relative;
+  top: 20px;
+  height: 100%;
+}
+.composition__photo {
+  position: absolute;
+  width: 55%;
+  transition: all 0.3s;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem 1px;
+}
+.composition__photo:hover {
+  z-index: 100;
+  transform: scale(1.1) translateY(-2rem);
+  outline: green solid 1rem;
+  outline-offset: 1rem;
+}
+.composition__photo:not(:hover) {
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.composition__photo-1 {
+  top: -2rem;
+  left: 0;
+}
+.composition__photo-2 {
+  right: 2rem;
+  top: 3rem;
+}
+.composition__photo-3 {
+  left: 8rem;
+  top: 10rem;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+}
+.section-about .section-1-row {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 3rem;
+}
+.section-about .section-1-left {
+  padding: 10px;
+}
+.section-about .section-1-right {
+  padding: 10px;
+}
